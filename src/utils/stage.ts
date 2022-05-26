@@ -73,67 +73,9 @@ export default class Stage implements IXXL {
   swap() {
     return new Promise((resolve, reject) => {
       const { target1, target2, data } = this
-      const {
-        positionLeft: pl1,
-        positionTop: pt1,
-        x: x1,
-        y: y1,
-        left: left1,
-        top: top1,
-        bottom: bottom1,
-        right: right1,
-      } = target1
-      const {
-        positionLeft: pl2,
-        positionTop: pt2,
-        x: x2,
-        y: y2,
-        left: left2,
-        top: top2,
-        bottom: bottom2,
-        right: right2,
-      } = target2
+      const { positionLeft: pl1, positionTop: pt1, x: x1, y: y1 } = target1
+      const { positionLeft: pl2, positionTop: pt2, x: x2, y: y2 } = target2
       setTimeout(() => {
-        if (x1 == x2) {
-          // 上下交换
-          target1.left = left2
-          target1.right = right2
-          target2.left = left1
-          target2.right = right1
-          if (y2 > y1) {
-            // 先点上面 上下交换
-            target1.top = bottom1
-            target1.bottom = bottom2
-            target2.top = top1
-            target2.bottom = top2
-          } else {
-            // 先点下面 上下交换
-            target1.top = top2
-            target1.bottom = top1
-            target2.top = bottom2
-            target2.bottom = bottom1
-          }
-        }
-        if (y1 == y2) {
-          // 左右交换
-          target1.top = top2
-          target1.bottom = bottom2
-          target2.top = top1
-          target2.bottom = bottom1
-          if (x2 > x1) {
-            // 先点左边
-            target1.left = right1
-            target1.right = right2
-            target2.left = left1
-            target2.right = left2
-          } else {
-            // 先点右边
-            target1.left = left2
-            target1.right = left1
-            target2.left = right2
-            target2.right = right1
-          }
-        }
         target1.positionLeft = pl2
         target1.positionTop = pt2
         target1.x = x2
