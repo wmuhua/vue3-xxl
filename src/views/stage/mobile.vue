@@ -39,6 +39,7 @@ const flag = ref(true)
 let width: number = document.documentElement.clientWidth
 const games = reactive(new Stage(7, 7, (width - 20) / 7))
 const { data, score } = toRefs(games)
+
 // 开始游戏
 const handleStart = () => {
   flag.value = false
