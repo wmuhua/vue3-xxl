@@ -34,8 +34,6 @@ import { onMounted, reactive, ref, toRefs } from "vue"
 import Stage from "@/utils/stage"
 import { ElMessageBox } from "element-plus"
 import type { Action } from "element-plus"
-console.log(1)
-
 const flag = ref(true)
 
 let width: number = document.documentElement.clientWidth
