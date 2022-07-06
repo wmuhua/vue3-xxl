@@ -35,6 +35,7 @@ import Stage from "@/utils/stage"
 import { ElMessageBox } from "element-plus"
 import type { Action } from "element-plus"
 const flag = ref(true)
+
 let games = reactive(new Stage(8, 8, 50))
 const { data, score } = toRefs(games)
 const handleStart = () => {
