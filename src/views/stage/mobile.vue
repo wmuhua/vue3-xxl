@@ -35,6 +35,7 @@ import Stage from "@/utils/stage"
 import { ElMessageBox } from "element-plus"
 import type { Action } from "element-plus"
 const flag = ref(true)
+
 let width: number = document.documentElement.clientWidth
 const games = reactive(new Stage(7, 7, (width - 20) / 7))
 const { data, score } = toRefs(games)
